@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 	
 	.center {
 		width: 100%;
@@ -90,20 +90,6 @@
 		float: left;
 	}
 
-	.foto-usuario {
-		width: 60px;
-		height: 60px;
-		margin-left: calc(50% - 40px);
-	}
-
-	.foto-usuario img {
-	    width: 100px;
-	    height: 100px;
-	    border-radius: 50%;
-	    border: solid 1.5px #fff;
-	    margin-left: calc(50% - 45px);
-	}
-
 	.nome-usuario {
 		text-align: center;
 		margin-top: 20px;
@@ -160,147 +146,9 @@
     	font-size: 15px;
 	}
 
-	/* CADASTRAR USUÁRIO */
-
-	.container-user h3 {
-		font-size: 20px;
-		text-align: center;
-	}
-
-	#cadastrarUsuario {
-		width: 100%;
-	}
-
-	/*--------------------------
-	RESPONSIVO HOME
-	--------------------------*/
-
-	.topo-aniversariantes h1 {
-		font-size: 30px;
-		margin-top: 20px;
-	}
-
-	.box-aniversarios {
-		width: 200px;
-		margin-left: calc(50% - 100px);
-		margin-bottom: 10px;
-	}
-
-	.box-aniversarios img {
-		width: 100%;
-		min-height: 160px;
-		max-height: 160px;
-		border-radius: 15px;
-	}
-
-	/* ---------------------------------------------------
-    PÁGINA: BUSCAR PROCESSOS
-	--------------------------------------------------- */
-
-	.busca-processos h1 {
-		font-size: 20px;
-	}
-
-	.header-conteudo-processos h2 {
-		margin-top: 30px;
-		margin-bottom: 0;
-		font-size: 20px;
-	}
-
-	.box-single-conteudo p {
-    	font-size: 15px;    
-	}
-
-	.box-single-conteudo h3 {
-    	font-size: 20px;    
-	}
-
-	.header-busca {
-	    background: none;
-	    padding: 5px;
-	}
-
-	.input-pesquisa {
-	    width: 100%;
-	    padding: 9px 16px 1px;
-	    border-radius: 30px;
-	    background-color: rgba(255, 255, 255, 0.3);
-	}
-
-	.box-content-sidebar select {
-		width: 100%;
-	    color: black;
-	}
-
-	.box-content-sidebar option {
-	    color: black;
-	}
-
-	.header-conteudo-processos {
-	    padding: 20px;
-	}
-
-	.box-single-conteudo {
-	    padding: 10px;
-	    border-bottom: 1px solid #ccc;
-	}
-
-	/* ---------------------------------------------------
-    PÁGINA: PROCESSOS SINGLE
-	--------------------------------------------------- */
-
-	section.processo-single h1{
-    font-size: 18px;
-    color: ;
-    border-bottom: 1px solid #4f4f4f;
-    color: black;
-	}
-
-	.titulo {
-	    margin-bottom: 10px;
-	    font-size: 15px;
-	    border-bottom: 1.5px solid #4f4f4f;
-	    color: black;
-	}
-
-	section.processo-single h3 {
-		font-size: 20px;
-		font-weight: bold;
-	}
-
-	section.processo-single p {
-		font-size: 15px;
-	}
-
-	section.processo-single article {
-	    margin-top: 15px;
-	    border-top: 1px solid #ccc;
-	}
-
-	section.processo-single article tbody{
-	    max-width: 100% !important;
-	    overflow-x: auto;
-	    overflow-y: auto;
-	    font-size: 11px;
-	}
-
-	section.processo-single article ul {
-	    list-style-position: inside;
-	    margin: 10px 0;
-	}
-
-	section.processo-single img {
-	    display: block;
-	    margin: 0 auto;
-	    max-width: 90%;
-	}
-
-	.pos-top {
-	    width: 100%;
-	}
-
-	.pos-top h5 {
-		font-size: 15px;
+	/* ALTERANDO A PROPRIEDADE DOS INPUTS */
+	.w-25, .w-50, .w-75 {
+		width: 100% !important;
 	}
 }
 

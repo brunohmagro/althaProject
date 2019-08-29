@@ -1,0 +1,15 @@
+# CRIAR BASE DE DADOS #
+CREATE DATABASE bd_althaia
+
+
+# CRIAR A TABELA DE USUARIOS #
+CREATE TABLE `bd_althaia`.`tb_usuario` ( `id_usuario` INT(8) NOT NULL AUTO_INCREMENT , `login_usuario` VARCHAR(20) NOT NULL , `nome_usuario` VARCHAR(60) NOT NULL , `senha_usuario` VARCHAR(40) NOT NULL , PRIMARY KEY (`id_usuario`, `login_usuario`)) ENGINE = InnoDB;
+
+
+# POPULAR A TABELA DE USUÁRIOS #
+INSERT INTO `tb_usuario` (`id_usuario`, `login_usuario`, `nome_usuario`, `senha_usuario`) VALUES (NULL, 'bruno.magro', 'Bruno Henrique Magro', 'fc3707fa908df1e82e30ecbdae3d094804a8f87d');
+#A SENHA DESCRIPTOGRAFADA É: 123456789
+
+
+# CRIAR TABELA DE MEDICAMENTOS #
+CREATE TABLE `bd_althaia`.`tb_medicamento` ( `id_medicamento` INT NOT NULL , `apresentacao` VARCHAR(200) NOT NULL , `pAtivo` VARCHAR(100) NOT NULL , `fornecedor` VARCHAR(100) NOT NULL , `descricao` VARCHAR(255) NOT NULL , `id_usuario` VARCHAR(20) NOT NULL , `dt_cadastro` DATETIME NOT NULL , PRIMARY KEY (`id_medicamento`)) ENGINE = InnoDB
