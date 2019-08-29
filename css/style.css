@@ -1,0 +1,570 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+
+}
+
+body {
+	overflow-x: hidden;
+	background-color: #dee0e2
+}
+
+.clear {
+	clear: both;
+}
+
+
+.center {
+	max-width: 1350px;
+	padding: 0 1%;
+	margin: 0 auto;
+}
+
+.container-user {
+	background-color: white;
+	padding: 20px;
+}
+
+.container-user h3 {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.h-700 {
+    height: 700px;
+}
+
+.overlay-loading{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0,0,0,0.4);
+}
+
+.overlay-loading img{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* 
+-------------------------------------------------------------------------
+|                        ESTILO HEADER E LOAD PAGE                      |
+-------------------------------------------------------------------------
+*/
+
+header {
+	padding: 10px 0;
+	background: #f2f6fc;
+	width: 100%;
+	height: 80px;
+	box-shadow: 0 8px 15px 0 rgba(219,219,219,0.25);
+}
+
+
+.header-logo img {
+	width: 160px;
+	margin-top: 5px;
+	float: left;
+}
+
+.loggout {
+	float: right;
+	margin-top: 12px;
+}
+
+.loggout a {
+	color: black;
+	font-size: 22px;
+}
+
+.menu-btn {
+	float: left;
+	cursor: pointer;
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+	margin-top: 5px;
+	margin-left: 25px;
+}
+
+.botao-home {
+	float: right;
+	margin-right: 30px;
+	margin-top: 12px;
+}
+
+.botao-config {
+	float: right;
+	margin-right: 30px;
+	margin-top: 12px;
+	font-size: 23px;
+}
+
+.botao-config a {
+	text-decoration: none;
+	color: black;
+}
+
+.botao-home a {
+	text-decoration: none;
+	color: black;
+	font-size: 22px;
+}
+
+.pagina {
+	width: calc(100% - 250px);
+	float: right;
+	background-color: #dbdbdb;
+	padding: 10px;
+	margin-top: 80px;
+	left: 0;
+}
+
+.pagina > .box-pagina {
+	background: white;
+	padding: 1%;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.w100 {
+	width: 100%;
+}
+
+.w30 {
+	width: 29%;
+}
+
+.w70 {
+	width: 69%;
+}
+
+.ml10 {
+	margin-left: 10px;
+}
+
+.mr10 {
+	margin-right: 10px;
+}
+
+
+/* ---------------------------------------------------
+    NAVBAR STYLE
+----------------------------------------------------- */
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    padding: 15px 10px;
+    background-color: #f2f6fc;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.menu-img {
+    width: 275px;
+}
+
+.menu-img img {
+    width: 130px !important;
+    margin-left: 20px;
+}
+
+.menu-img button {
+    margin-top: 15px;
+}
+
+.itens-menu ul li {
+    display: inline-block;
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.itens-menu ul li a {
+	color: black;
+}
+
+.itens-menu-sidebar {
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+
+.itens-menu-sidebar ul li {
+    display: inline-block;
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.botao-config a {
+    display: block;
+}
+
+.navbar-btn {
+    float: left;
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.navbar img {
+    width: 170px;
+}
+
+.list-unstyled li img {
+    width: 140px;
+    margin-left: calc(50% - 75px);
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    padding-top: 80px;
+    left: -250px;
+    height: 100%;
+    z-index: 999;
+    background: #1b2133;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #1b2133;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #7386D5;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #1b2133;
+    height: 150px;
+}
+
+.avatar-usuario {
+    margin-top: 15px;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: solid 1.2px #f2f6fc;
+    float: left;
+    margin-left: calc(50% - 50px);
+}
+
+#sidebar ul.components {
+    padding-top: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding-bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+    border-bottom: 0.5px solid #fff;
+    margin: 0;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1em;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+    color: #1b2133;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: red;
+    border-left: 6px solid #00cc99;
+    background: #b8bfc6;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #01A3B2;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+.foto-usuario img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: solid 2px #fff;
+    margin-left: calc(50% - 55px);
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    transition: all 0.3s;
+    top: 0;
+    right: 0;
+}
+
+.container {
+    padding-top: 90px;
+}
+
+
+/* ---------------------------------------------------
+    PÁGINA: LISTAR PROCESSOS
+----------------------------------------------------- */
+
+.box-content h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.box-content h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin:0;
+}
+
+.wraper-table {
+    margin-bottom: 30px;
+}
+
+/* ---------------------------------------------------
+    PÁGINA: BUSCAR PROCESSOS
+----------------------------------------------------- */
+
+.header-busca {
+    height: 60px;
+    background-color: #17A2B8;
+    padding: 5px;
+}
+
+.busca-processos h1 b {
+    color: #298DAB;
+}
+
+.input-pesquisa {
+    width: 400px;
+    padding: 8px 16px 0.5px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.box-content-sidebar select {
+    background: none;
+    border: none;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+    padding: 12px;
+}
+
+.box-content-sidebar option {
+    color: black;
+}
+
+.header-conteudo-processos {
+    padding: 20px;
+}
+
+.box-single-conteudo {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.box-single-conteudo p {
+    color: black;    
+}
+
+.box-single-conteudo button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.paginacao {
+    margin-top: 15px;
+}
+
+/* ---------------------------------------------------
+    PÁGINA: PROCESSOS SINGLE
+--------------------------------------------------- */
+
+section.processo-single {
+    padding: 20px 0;
+
+}
+
+section.processo-single h1{
+    font-size: 26px;
+    color: ;
+    border-bottom: 1px solid #4f4f4f;
+    color: black;
+}
+
+.titulo {
+    margin-bottom: 10px;
+    font-size: 26px;
+    border-bottom: 1.5px solid #4f4f4f;
+    color: black;
+}
+
+section.processo-single h2,
+section.processo-single h3,
+section.processo-single h4,
+section.processo-single h5,
+section.processo-single p {
+    margin: 10px 0;
+    color: black;
+}
+
+section.processo-single article {
+    margin-top: 15px;
+}
+
+section.processo-single article tbody{
+    max-width: 100% !important;
+}
+
+section.processo-single article ul {
+    list-style-position: inside;
+    margin: 10px 0;
+}
+
+section.processo-single img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.pos-top {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 50px;
+}

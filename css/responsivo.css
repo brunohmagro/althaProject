@@ -1,0 +1,306 @@
+@media screen and (max-width: 600px) {
+	
+	.center {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	header {
+		padding: 10px 0;
+		background: #f2f6fc;
+		width: 100%;
+		height: 60px;
+		box-shadow: 0 8px 15px 0 rgba(219,219,219,0.30);
+	}
+
+
+	.header-logo img {
+		width: 130px;
+		margin-top: 0;
+		float: left;
+	}
+
+	.loggout {
+		float: right;
+		margin-top: 5px;
+	}
+
+	.loggout a {
+		color: black;
+		font-size: 20px;
+	}
+
+	.menu-btn {
+		float: left;
+		cursor: pointer;
+		font-size: 20px;
+		color: black;
+		text-decoration: none;
+		margin-top: 5px;
+		margin-left: 10px;
+	}
+
+	.botao-home {
+		float: right;
+		margin-right: 10px;
+		margin-top: 3px;
+	}
+
+	.botao-config {
+		float: right;
+		margin-right: 10px;
+		margin-top: 6px;
+		font-size: 20px;
+	}
+
+	.botao-config a {
+		text-decoration: none;
+		color: black;
+	}
+
+	.botao-home a {
+		text-decoration: none;
+		color: black;
+		font-size: 22px;
+	}
+
+	.pagina {
+		margin-top: 60px;
+	}
+
+	.menu {
+		top: 60px;
+		height: 100%;
+	}
+
+	.box-usuario {
+		text-align: center;
+		padding: 8px;
+		margin-top: 3px;
+	}
+
+	.avatar-usuario {
+		margin-top: 8px;
+		text-align: left;
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: solid 1.2px #f2f6fc;
+		float: left;
+	}
+
+	.foto-usuario {
+		width: 60px;
+		height: 60px;
+		margin-left: calc(50% - 40px);
+	}
+
+	.foto-usuario img {
+	    width: 100px;
+	    height: 100px;
+	    border-radius: 50%;
+	    border: solid 1.5px #fff;
+	    margin-left: calc(50% - 45px);
+	}
+
+	.nome-usuario {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.nome-usuario p {
+		margin-bottom: 3px;
+		font-size: 11px;
+		color: white;
+	}
+
+	.itens-menu > h4 {
+		color: white;
+		font-size: 12px;
+		padding: 8px 8px;
+	}
+
+	.itens-menu a {
+		margin-top: 0.5px;
+		text-decoration: none !important;
+		color: white;
+		display: block;
+		padding: 8px;
+		font-size: 13px;
+		border-bottom: 1px solid #0b0d0e;
+	}
+
+	.navbar img {
+    	width: 130px;
+    	float: right !important;
+    	margin-top: 6px;
+    	margin-right: 0 !important;
+	}
+
+	.menu-img {
+    	width: 400px;
+	}
+
+	.itens-menu {
+		display: none;
+	}
+
+	.list-unstyled li img {
+		width: 150px;
+		margin-left: calc(50% - 75px);
+	}
+
+	.menu-img button {
+		float: left !important;
+	}
+
+	.itens-menu-sidebar {
+    	display: block;
+    	font-size: 15px;
+	}
+
+	/* CADASTRAR USUÁRIO */
+
+	.container-user h3 {
+		font-size: 20px;
+		text-align: center;
+	}
+
+	#cadastrarUsuario {
+		width: 100%;
+	}
+
+	/*--------------------------
+	RESPONSIVO HOME
+	--------------------------*/
+
+	.topo-aniversariantes h1 {
+		font-size: 30px;
+		margin-top: 20px;
+	}
+
+	.box-aniversarios {
+		width: 200px;
+		margin-left: calc(50% - 100px);
+		margin-bottom: 10px;
+	}
+
+	.box-aniversarios img {
+		width: 100%;
+		min-height: 160px;
+		max-height: 160px;
+		border-radius: 15px;
+	}
+
+	/* ---------------------------------------------------
+    PÁGINA: BUSCAR PROCESSOS
+	--------------------------------------------------- */
+
+	.busca-processos h1 {
+		font-size: 20px;
+	}
+
+	.header-conteudo-processos h2 {
+		margin-top: 30px;
+		margin-bottom: 0;
+		font-size: 20px;
+	}
+
+	.box-single-conteudo p {
+    	font-size: 15px;    
+	}
+
+	.box-single-conteudo h3 {
+    	font-size: 20px;    
+	}
+
+	.header-busca {
+	    background: none;
+	    padding: 5px;
+	}
+
+	.input-pesquisa {
+	    width: 100%;
+	    padding: 9px 16px 1px;
+	    border-radius: 30px;
+	    background-color: rgba(255, 255, 255, 0.3);
+	}
+
+	.box-content-sidebar select {
+		width: 100%;
+	    color: black;
+	}
+
+	.box-content-sidebar option {
+	    color: black;
+	}
+
+	.header-conteudo-processos {
+	    padding: 20px;
+	}
+
+	.box-single-conteudo {
+	    padding: 10px;
+	    border-bottom: 1px solid #ccc;
+	}
+
+	/* ---------------------------------------------------
+    PÁGINA: PROCESSOS SINGLE
+	--------------------------------------------------- */
+
+	section.processo-single h1{
+    font-size: 18px;
+    color: ;
+    border-bottom: 1px solid #4f4f4f;
+    color: black;
+	}
+
+	.titulo {
+	    margin-bottom: 10px;
+	    font-size: 15px;
+	    border-bottom: 1.5px solid #4f4f4f;
+	    color: black;
+	}
+
+	section.processo-single h3 {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	section.processo-single p {
+		font-size: 15px;
+	}
+
+	section.processo-single article {
+	    margin-top: 15px;
+	    border-top: 1px solid #ccc;
+	}
+
+	section.processo-single article tbody{
+	    max-width: 100% !important;
+	    overflow-x: auto;
+	    overflow-y: auto;
+	    font-size: 11px;
+	}
+
+	section.processo-single article ul {
+	    list-style-position: inside;
+	    margin: 10px 0;
+	}
+
+	section.processo-single img {
+	    display: block;
+	    margin: 0 auto;
+	    max-width: 90%;
+	}
+
+	.pos-top {
+	    width: 100%;
+	}
+
+	.pos-top h5 {
+		font-size: 15px;
+	}
+}
+
