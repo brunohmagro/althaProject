@@ -18,26 +18,6 @@
 	define('PASSWORD','$Amanda@2021$');
 	define('DATABASE','bd_althaia');
 
-	
-	//CONVERTE TODAS AS DATAS PARA O FORMATO DO BANCO DE DADOS E VICE E VERSA
-	function convertData($data) {
-		if(strstr($data, "/")) {
-			$d = explode("/",$data);
-			$rdata = "$d[2]-$d[1]-$d[0]";
-		}else {
-			$d = explode("-",$data);
-			$rdata = "$d[2]/$d[1]/$d[0]";
-		}
-		return $rdata;
-	}
-
-	//MANTEM UM POST FEITO PELO USUÁRIO NOS CAMPOS (UTILZIADO PARA OS CASOS ONDE HÁ ERRO NAS INFORMAÇÕES)
-	function recoverPost($post){
-		if(isset($_POST[$post])){
-			echo $_POST[$post];
-		}
-	}
-
 	function loadPage() {
 		if(isset($_GET['url'])) {
 			$url = explode('/',$_GET['url']);

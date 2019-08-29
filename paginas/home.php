@@ -1,6 +1,8 @@
 <?php
+	//PROTEÇÃO PARA ACESSO DIRETO AO ARQUIVO
 	if(!isset($logado)) {
-		die("Arquivo Protegido");
+		echo '<center style="width: 100%; height: 20px; background-color: red; color: white; font-family: Arial; padding-top: 3px;">Arquivo Protegido</center>';
+        die();
 	}
 ?>
 

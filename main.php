@@ -70,8 +70,6 @@
             <div class="itens-menu-sidebar float-left">
                 <ul>
                     <li><a href="<?php echo INCLUDE_PATH_PORTAL ?>home"><i class="fas fa-home" title="Home"></i></a></li>
-                    <li><a data-toggle="modal" data-target="#editarUsuario" href="#" id="dataEditarUsuario" data-id="<?php echo $_SESSION['user']; ?>"><i title="Editar Usuário" class="fas fa-users-cog"></i></a></li>
-                    <li><a data-toggle="modal" data-target="#trocarsenha" href=""><i title="Alterar Senha" class="fab fa-expeditedssl"></i></a></li>
                     <li><a href="<?php echo INCLUDE_PATH_PORTAL ?>?loggout"><i title="Sair" class="fas fa-sign-out-alt"></i></a></li>
                 </ul>
             </div><!--itens-menu-sidebar-->
@@ -101,7 +99,7 @@
                         <li><a href="<?php echo INCLUDE_PATH_PORTAL ?>?loggout"><i title="Sair" class="fas fa-sign-out-alt"></i></a></li>
                     </ul>
                 </div><!--itens-menu-->
-            </nav>
+            </nav><!-- navbar -->
 
     <div class="overlay"></div>
 

@@ -7,9 +7,7 @@
 
     <!-- ESTILO -->
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PORTAL ?>css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PORTAL ?>css/login.css">
-
-    
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PORTAL ?>css/login.css">    
 
   <title>Login | Althaia</title>
   </head>
@@ -33,6 +31,7 @@
                 <input id="senha" type="password" class="form-control" name="senha" required>
             </div><!--form-group-->
             <div class="form-group text-center">
+                <input type="hidden" name="pageLogin">
                 <input type="hidden" name="entrarSistema">
                 <button type="submit" name="login" class="btn btn-primary" id="login">ENTRAR</button>
             </div><!--form-group-->

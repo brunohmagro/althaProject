@@ -1,16 +1,6 @@
 $(function(){
 
- 	//CONFIRMA UMA SOLICITAÇÃO DE DELETAR DO BANCO DE DADOS
-	$('body').on('click','[actionBtn=delete]', function() {
-		var txt;
-		var r = confirm("Tem certeza que deseja excluir?!");
-		if(r == true) {
-			return true;
-		}else {
-			return false;
-		}
-	})
-
+ 	
 	//DEFINE O FORMATO DE INPUT DO CÓDIGO DE MEDICAMENTOS
 	$('[formato=codigoRemedio]').mask('9999999999');
 

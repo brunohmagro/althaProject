@@ -40,6 +40,7 @@
 
 
 		<input type="hidden" name="cadastrarMedicamento">
+		<input type="hidden" name="logado">
 		<button type="submit" class="btn btn-primary float-right" style="margin-bottom: 15px;" id="btnCadastroMedicamento" name="btnCadastroMedicamento">CADASTRAR</button>
 	</form>
 <div class="clear"></div>

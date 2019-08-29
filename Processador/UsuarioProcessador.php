@@ -1,5 +1,11 @@
 <?php
 	
+    //PROTEGE O ACESSO DIRETO AO ARQUIVO
+    if(!isset($_POST['pageLogin'])) {
+        echo '<center style="width: 100%; height: 20px; background-color: red; color: white; font-family: Arial; padding-top: 3px;">Arquivo Protegido</center>';
+        die();
+    }
+
 	include('../config.php');
 
     switch ($_POST) {
@@ -7,62 +13,35 @@
     case isset($_POST['entrarSistema']):
 
         $usuario = $_POST['usuario'];
-        $senha = sha1(sha1($_POST['senha']));
-        $sql = MySql::conectar()->prepare("SELECT * FROM `tb_usuario` WHERE login_usuario  = ? AND senha_usuario = ?");
-        $sql->execute(array($usuario,$senha));
-        
-        if($sql->rowCount() == 1) {
-        //LOGAMOS COM SUCESSO.
-            $info = $sql->fetch();
-            $_SESSION['login'] = true;
-            $_SESSION['user'] = $usuario;
-            $_SESSION['nome'] = $info['nome_usuario'];
+        $senha = $_POST['senha'];
 
-            $resp = 'sucesso';
-        }else {
-            $resp = 'falha';
-        }
+        if($usuario != '' && strlen($usuario) > 5 && strpos($usuario,'.') != 0 && $senha != '' && strlen($senha) > 8) {
+            
+            $login = new Usuario();
+            $login->setLogin($usuario);
+            $login->setSenha($senha);
+            $logar = $login->validaUsuario();
 
-        echo json_encode(array($resp), JSON_PRETTY_PRINT);
-        break;
-    //SELECIONA TODOS OS SUBMOTIVOS DOS EVENTOS POR MOTIVO
-    case isset($_POST['atualizarSenhaUsuario']):
+            if($logar != false) {
+                //LOGAMOS COM SUCESSO.
+                $_SESSION['login'] = true;
+                $_SESSION['user'] = $usuario;
+                $_SESSION['nome'] = $logar['nome_usuario'];
 
-        $id_usuario = $_POST['id_usuario'];
-        $senhaAtual = sha1(sha1($_POST['senha-atual']));
-        $senhaNova1 = sha1(sha1($_POST['nova-senha']));
-        $senhaNova2 = sha1(sha1($_POST['conf-senha']));
-
-        if($senhaNova1 == $senhaNova2) {
-
-            $usuario = new Usuario();
-            $usuario->setLogin($id_usuario);
-            $usuario->setSenha($senhaAtual);
-
-            $validaUsuario = Usuario::validaSenhaAtual($usuario);
-
-            if($validaUsuario == true) {
-                //AGORA PODEMOS ATUALIZAR A SENHA
                 $resp = 'sucesso';
-                $alerta = 'Vou alterar a senha';
+                $alerta = 'home';
             }else {
                 $resp = 'falha';
-                $alerta = 'A senha atual informada está incorreta!';
+                $alerta = 'Usuário ou senha incorretos!';
             }
         }else {
             $resp = 'falha';
-            $alerta = 'As senhas informadas não são iguais!';
-        }
+            $alerta = 'Usuário ou senha incorretos!';
+        }        
 
-        echo json_encode(Array($resp,$alerta));
+        echo json_encode(array($resp,$alerta), JSON_PRETTY_PRINT);
         break;
-        //EDITAR APELIDO E IMAGEM USUÁRIO
-        case isset($_POST['atualizaInfoUsuario']):
-
-        //$novo_apelido = filter_input(INPUT_POST, 'apelido');
-
-        echo 'Tudo certo';
-        break;
+    
     }
 
 

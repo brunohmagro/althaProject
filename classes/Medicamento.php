@@ -85,6 +85,36 @@
         	}
         }
 
+        //CONSULTA A DESCRIÇÃO DO MEDICAMENTO NO BANCO DE DADOS
+        public function consutarMedicamento() {
+        	$sql = MySql::conectar()->prepare("SELECT * FROM `tb_medicamento` WHERE id_medicamento = ?");
+        	if($sql->execute(array($this->getIdMedicamento()))) {
+        		return $sql->fetch();
+        	}else {
+        		return false;
+        	}
+        }
+
+        //EDITA UM MEDICAMENTO NO BANCO DE DADOS
+        public function editarMedicamento() {
+        	$sql = Mysql::conectar()->prepare("UPDATE `tb_medicamento` SET apresentacao = ?,pAtivo = ?,fornecedor = ?,descricao = ? WHERE id_medicamento = ?");
+        	if($sql->execute(array($this->getApresentacao(),$this->getPAtivo(),$this->getFornecedor(),$this->getDescricao(),$this->getIdMedicamento()))) {
+        		return true;
+        	}else {
+        		return false;
+        	}
+        }
+
+        //EXCLUI UM MEDICAMENTO NO BANCO DE DADOS
+        public function excluirMedicamento() {
+        	$sql = MySql::conectar()->prepare("DELETE FROM `tb_medicamento` WHERE id_medicamento = ?");
+        	if($sql->execute(array($this->getIdMedicamento()))) {
+        		return true;
+        	}else {
+        		return false;
+        	}
+        }
+
 
 	}
 
